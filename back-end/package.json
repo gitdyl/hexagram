@@ -1,0 +1,14 @@
+{
+  "name": "sun-moon-astro",
+  "version": "1.0.0",
+  "description": "a journalling app for self-guidance via natural cycles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dyl",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
