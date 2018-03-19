@@ -6,18 +6,24 @@ const app = express()
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 
-// body-parser config
+/* body-parser config*/
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
+/* database hookup */
+mongoose.connect('mongodb://localhost:27017/sun-moon-astro')
+mongoose.connection.on('open', function() { console.log('db connected')})
+
+// MODELS
+
+require('./models/User')
+require('./models/Entry')
 
 // CONTROLLERS
 
 const userController = require('./controllers/userController.js')
 const entryController = require('./controllers/entryController.js')
-
-
 
 // USER ROUTES 
 
